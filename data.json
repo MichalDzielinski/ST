@@ -1,0 +1,41 @@
+[
+{
+  "model": "book.book",
+  "pk": 1,
+  "fields": {
+    "title": "next one",
+    "author": 1,
+    "status": "Reading"
+  }
+},
+{
+  "model": "book.book",
+  "pk": 3,
+  "fields": {
+    "title": "kokost",
+    "author": 2,
+    "status": "Read"
+  }
+},
+{
+  "model": "authors.author",
+  "pk": 1,
+  "fields": {
+    "name": "Bubba Sparxr"
+  }
+},
+{
+  "model": "authors.author",
+  "pk": 2,
+  "fields": {
+    "name": "some body"
+  }
+},
+{
+  "model": "authors.author",
+  "pk": 3,
+  "fields": {
+    "name": "else"
+  }
+}
+]

@@ -1,0 +1,32 @@
+{% extends 'core/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+{{ author.name }}
+{% endblock title %}
+
+{% block content %}
+
+<h1 class="mb-6 text-2xl">
+    {{author.name}}
+</h1>
+
+{% if author.books.count %}
+    {% for book in author.books.all %}
+        <div class="grid grid-cols-2 gap-4 bg-slate-100 p-4">
+            <h2>
+                <a href="{% url 'book:detail' book.id %}">
+                {{book.title}}</a>
+            </h2>
+                    
+
+            <p>{{book.status}}</p>
+
+        </div>
+    {% endfor %}
+{% else %}
+    <p>This author doesn's have any boooks yet...</p>
+
+{% endif %}
+
+{% endblock content %}
